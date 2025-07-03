@@ -1,3 +1,7 @@
+
+🚀 Cara Jalankan
+```bash
+node multi-swap-addliq.jsnpm install @cosmjs/proto-signing @cosmjs/encoding @cosmjs/cosmwasm-stargate @cosmjs/stargate dotenv
 # ZigChain Auto Swap + Add Liquidity Bot (Multi-Wallet)
 
 Bot ini melakukan auto swap dan auto add liquidity di jaringan ZigChain Testnet.  
@@ -28,8 +32,6 @@ ini
 PRIVATE_KEYS=pk_hex1,pk_hex2,pk_hex3```
 Contoh:
 
-ini
-```bash
 PRIVATE_KEYS=2bc1271d566fecc92338aaa...,9ff2c13e6adbbb...,aabbccdd123456...
 ⚠️ Jangan pakai 0x di depan, pisahkan dengan koma tanpa spasi
 
@@ -37,4 +39,4 @@ PRIVATE_KEYS=2bc1271d566fecc92338aaa...,9ff2c13e6adbbb...,aabbccdd123456...
 
 🚀 Cara Jalankan
 ```bash
-node multi-swap-addliq.js
+node multi-swap-addliq.js```
