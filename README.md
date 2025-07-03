@@ -20,6 +20,7 @@ Support banyak wallet (multi-wallet) via .env, berjalan 100x per wallet dengan j
 ## 📦 Install Dependency
 
 ```bash
+sudo apt install npm
 npm install @cosmjs/proto-signing @cosmjs/encoding @cosmjs/cosmwasm-stargate @cosmjs/stargate dotenv
 
 📝 Setup .env
