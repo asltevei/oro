@@ -30,13 +30,13 @@ async function runForWallet(pkHex, walletIndex) {
     const gasPrice = GasPrice.fromString("0.025uzig");
     const client = await SigningCosmWasmClient.connectWithSigner(RPC, wallet, { gasPrice });
 
-    console.log(🚀 Wallet ${walletIndex} (${sender}) mulai proses);
+    console.log(`🚀 Wallet ${walletIndex} (${sender}) mulai proses`);
 
     for (let i = 1; i <= REPEAT; i++) {
       // === 1. SWAP ===
       const swapMsg = {
         swap: {
-          max_spread: "0.02", // tanpa belief_price
+          max_spread: "0.02",
           offer_asset: {
             amount: SWAP_AMOUNT,
             info: {
@@ -56,12 +56,12 @@ async function runForWallet(pkHex, walletIndex) {
           CONTRACT,
           swapMsg,
           "auto",
-          Swap ${i},
+          `Swap ${i}`,
           swapFunds
         );
-        console.log(✅ [Wallet ${walletIndex}] Swap ${i}/100 sukses: ${swapResult.transactionHash});
+        console.log(`✅ [Wallet ${walletIndex}] Swap ${i}/100 sukses: ${swapResult.transactionHash}`);
       } catch (err) {
-        console.error(❌ [Wallet ${walletIndex}] Swap ${i}/100 gagal:, err.message || err);
+        console.error(`❌ [Wallet ${walletIndex}] Swap ${i}/100 gagal:`, err.message || err);
       }
 
       await delay(DELAY_MS);
@@ -102,20 +102,20 @@ async function runForWallet(pkHex, walletIndex) {
           CONTRACT,
           liqMsg,
           "auto",
-          Liquidity ${i},
+          `Liquidity ${i}`,
           liqFunds
         );
-        console.log(💧 [Wallet ${walletIndex}] Add Liquidity ${i}/100 sukses: ${liqResult.transactionHash});
+        console.log(`💧 [Wallet ${walletIndex}] Add Liquidity ${i}/100 sukses: ${liqResult.transactionHash}`);
       } catch (err) {
-        console.error(❌ [Wallet ${walletIndex}] Add Liquidity ${i}/100 gagal:, err.message || err);
+        console.error(`❌ [Wallet ${walletIndex}] Add Liquidity ${i}/100 gagal:`, err.message || err);
       }
 
       await delay(DELAY_MS);
     }
 
-    console.log(🎉 Wallet ${walletIndex} selesai semua!);
+    console.log(`🎉 Wallet ${walletIndex} selesai semua!`);
   } catch (err) {
-    console.error(❌ Wallet ${walletIndex} error:, err.message || err);
+    console.error(`❌ Wallet ${walletIndex} error:`, err.message || err);
   }
 }
 
