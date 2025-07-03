@@ -21,23 +21,3 @@ Support banyak wallet (multi-wallet) via .env, berjalan 100x per wallet dengan j
 
 ```bash
 npm install @cosmjs/proto-signing @cosmjs/encoding @cosmjs/cosmwasm-stargate @cosmjs/stargate dotenv
-
----
-
-## 📝 Setup .env
-
-Buat file .env di root project, isi seperti ini:
-
-```bash
-PRIVATE_KEYS=pk_hex1,pk_hex2,pk_hex3```
-Contoh:
-
-PRIVATE_KEYS=2bc1271d566fecc92338aaa...,9ff2c13e6adbbb...,aabbccdd123456...
-⚠️ Jangan pakai 0x di depan, pisahkan dengan koma tanpa spasi
-
----
-
-🚀 Cara Jalankan
-
-```bash
-node multi-swap-addliq.js
