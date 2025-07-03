@@ -18,20 +18,22 @@ Mendukung multi-wallet, 100x transaksi per wallet, dan jeda aman antar transaksi
 ## 📦 Install Dependencies
 
 ```bash
-npm install @cosmjs/proto-signing @cosmjs/encoding @cosmjs/cosmwasm-stargate @cosmjs/stargate dotenv
+npm install @cosmjs/proto-signing @cosmjs/encoding @cosmjs/cosmwasm-stargate @cosmjs/stargate dotenv```
 
 📝 Setup .env
 Buat file .env di root project, isi seperti ini:
 
 ini
 ```bash
-PRIVATE_KEYS=pk_hex1,pk_hex2,pk_hex3
+PRIVATE_KEYS=pk_hex1,pk_hex2,pk_hex3```
 Contoh:
 
 ini
 ```bash
 PRIVATE_KEYS=2bc1271d566fecc92338aaa...,9ff2c13e6adbbb...,aabbccdd123456...
 ⚠️ Jangan pakai 0x di depan, pisahkan dengan koma tanpa spasi
+
+---
 
 🚀 Cara Jalankan
 ```bash
