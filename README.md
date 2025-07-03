@@ -33,4 +33,4 @@ PRIVATE_KEYS=2bc1271d566fecc92338aaa...,9ff2c13e6adbbb...,aabbccdd123456...
 
 🚀 Cara Jalankan
 
-node multi-swap-addliq.js
+node index.js
