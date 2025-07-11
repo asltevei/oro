@@ -22,7 +22,9 @@ Support banyak wallet (multi-wallet) via .env, berjalan 100x per wallet dengan j
 ```bash
 sudo apt install npm
 ```
+```
 npm install @cosmjs/proto-signing @cosmjs/encoding @cosmjs/cosmwasm-stargate @cosmjs/stargate dotenv
+```
 
 📝 Setup .env
 Buat file .env di root project, isi seperti ini:
